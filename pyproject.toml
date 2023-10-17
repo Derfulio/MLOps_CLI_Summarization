@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mlops-cli-summarization"
+version = "0.1.2"
+description = "Demo python CLI tool to summarize text using HuggingFace"
+authors = ["Derfulio <36664091+Derfulio@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "summarize"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+transformers = "^4.34.0"
+click = "^8.1.7"
+tensorflow = "^2.14.0"
+beautifulsoup4 = "^4.12.2"
+
+[tool.poetry.scripts]
+summarize = 'summarize.main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
